@@ -13,6 +13,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { UsersComponent } from './pages/users/users.component';
 import { NavService } from './common/services/nav.service';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { ErrorIntercept } from './common/interceptors/error.interceptop';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,11 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     HttpClientModule,
   ],
   providers: [NavService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ErrorIntercept,
+      multi: true
+    },
     { provide: LocationStrategy, useClass: HashLocationStrategy },
   ],
   bootstrap: [AppComponent]
