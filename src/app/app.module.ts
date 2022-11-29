@@ -14,6 +14,10 @@ import { UsersComponent } from './pages/users/users.component';
 import { NavService } from './common/services/nav.service';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { ErrorIntercept } from './common/interceptors/error.interceptop';
+import { CreateUpdateComponent } from './pages/users/create-update/create-update.component';
+import { HasErrorPipe } from './common/pipes/has-error.pipe';
+import { IsInvalidPipe } from './common/pipes/is-invalid.pipe';
+import { DetailsComponent } from './pages/users/details/details.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,11 @@ import { ErrorIntercept } from './common/interceptors/error.interceptop';
     LayoutComponent,
     SidebarComponent,
     HomeComponent,
-    UsersComponent
+    UsersComponent,
+    CreateUpdateComponent,
+    HasErrorPipe,
+    IsInvalidPipe,
+    DetailsComponent,
   ],
   imports: [
     BrowserModule,

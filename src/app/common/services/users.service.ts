@@ -20,7 +20,7 @@ export class UsersService {
       let relativeUrl: string = 'users/' + id;
       let url: string = this.rootUrl + relativeUrl;
       return this.http.get<any>(url).pipe(map(res => {
-        return res.data;
+        return res;
     }));
   }
   delete(id: number): Observable<any> {
