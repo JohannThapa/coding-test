@@ -29,20 +29,20 @@ export class UsersService {
     return this.http.delete<any>(url);
   }
   create(data: User) {
-    let relativeUrl: string = 'create';
-    let url: string = this.rootUrl + relativeUrl;
+    let relativeUrl: string = 'https://mockend.com/adamClements/coding-test';
+    let url: string = relativeUrl;
     let header = new HttpHeaders();
     header.set('Access-Control-Allow-Origin', '*');
     header.append('Content-Type', 'application/json');
     header.append('Accept', 'application/json');
     header.append('Access-Control-Allow-Origin', '*');
-    header.append('Origin','http://localhost:4500');
+    header.append('Origin','http://localhost:4200');
     return this.http.post(url, data, { headers: header });
   }
 
   update(id: number, data: User) {
-    let relativeUrl: string = 'update/' + id;
-    let url: string = this.rootUrl + relativeUrl;
+    let relativeUrl: string = 'https://mockend.com/adamClements/coding-test/' + id;
+    let url: string = relativeUrl;
     return this.http.post(url, data);
   }
 

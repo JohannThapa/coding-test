@@ -34,7 +34,7 @@ export class CreateUpdateComponent {
       lastName: [item.lastName ? item.lastName : '', [Validators.required, Validators.minLength(3)]],
       email: [item.email ? item.email : '', [Validators.required, Validators.email]],
       age: [item.age ? item.age : 18, [Validators.required, Validators.min(18)]],
-      id: [item.id]
+      id: [item.id ? item.id : 0]
     });
   }
 
