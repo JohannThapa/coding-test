@@ -43,7 +43,7 @@ export class UsersService {
   update(id: number, data: User) {
     let relativeUrl: string = 'https://mockend.com/adamClements/coding-test/' + id;
     let url: string = relativeUrl;
-    return this.http.post(url, data);
+    return this.http.put(url, data);
   }
 
 }
