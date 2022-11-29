@@ -1,0 +1,178 @@
+input {
+  width: 90%;
+  padding: 1em;
+  line-height: 1.4;
+  background-color: $primary-background;
+  border: 1px solid $color-gray;
+  border-radius: 3px;
+  -webkit-transition: 0.35s ease-in-out;
+  -moz-transition: 0.35s ease-in-out;
+  -o-transition: 0.35s ease-in-out;
+  transition: 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+
+  &[type="radio"] + label,
+  &[type="checkbox"] + label:before {
+    width: 100%;
+    padding: 1em;
+    line-height: 1.4;
+    background-color: $primary-background;
+    border: 1px solid $color-gray;
+    border-radius: 3px;
+    -webkit-transition: 0.35s ease-in-out;
+    -moz-transition: 0.35s ease-in-out;
+    -o-transition: 0.35s ease-in-out;
+    transition: 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+  }
+}
+select {
+  option {
+    width: 100%;
+    padding: 1em;
+    line-height: 1.4;
+    background-color: $primary-background;
+    border: 1px solid $color-gray;
+    border-radius: 3px;
+    -webkit-transition: 0.35s ease-in-out;
+    -moz-transition: 0.35s ease-in-out;
+    -o-transition: 0.35s ease-in-out;
+    transition: 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+
+    width: 100%;
+    padding: 1em;
+    line-height: 1.4;
+    background-color: $primary-background;
+    border: 1px solid $color-gray;
+    border-radius: 3px;
+    -webkit-transition: 0.35s ease-in-out;
+    -moz-transition: 0.35s ease-in-out;
+    -o-transition: 0.35s ease-in-out;
+    transition: 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+  }
+}
+input {
+  &:focus {
+    outline: 0;
+    border-color: $secondary-color;
+
+  }
+  &[type="radio"] {
+    display: none;
+
+  }
+}
+select {
+  display: block;
+  width: 50%;
+  text-align: center;
+  float: left;
+  border-radius: 0;
+
+    &:checked + label {
+      background-color: $secondary-color-soft;
+      color: white;
+      border-color: $secondary-color;
+    }
+  &:checked + label:before {
+    background-color: $secondary-color-soft;
+    color: white;
+    border-color: $secondary-color;
+  }
+}
+
+select {
+  &:focus,
+  &:active {
+    background-color: $secondary-color-soft;
+    color: white;
+    border-color: $secondary-color;
+  }
+}
+input {
+  &[type="checkbox"] {
+    display: none;
+  }
+  &:checked + label:after {
+    opacity: 1;
+  }
+}
+select {
+  height: 3.4em;
+  line-height: 2;
+
+  &:first-of-type {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+  &:last-of-type {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+  &:focus,
+  &:active {
+    outline: 0;
+  }
+  option {
+    background-color: $secondary-color-soft;
+    color: white;
+  }
+}
+.input-group {
+  margin-bottom: 1em;
+  zoom: 1;
+
+  &:before {
+    content: "";
+    display: table;
+  }
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+.input-group-icon {
+  position: relative;
+
+  input {
+    padding-left: 4.4em;
+  }
+  .input-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3.4em;
+    height: 3.4em;
+    line-height: 3.4em;
+    text-align: center;
+    pointer-events: none;
+
+    &:after {
+      position: absolute;
+      top: 0.6em;
+      bottom: 0.6em;
+      left: 3.4em;
+      display: block;
+      border-right: 1px solid $color-gray;
+      content: "";
+      -webkit-transition: 0.35s ease-in-out;
+      -moz-transition: 0.35s ease-in-out;
+      -o-transition: 0.35s ease-in-out;
+      transition: 0.35s ease-in-out;
+      transition: all 0.35s ease-in-out;
+    }
+    i {
+      -webkit-transition: 0.35s ease-in-out;
+      -moz-transition: 0.35s ease-in-out;
+      -o-transition: 0.35s ease-in-out;
+      transition: 0.35s ease-in-out;
+      transition: all 0.35s ease-in-out;
+    }
+  }
+}
+.invalid-feedback {
+  color: $form-invalid-feedback-font-color;
+}

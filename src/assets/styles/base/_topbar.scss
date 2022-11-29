@@ -1,0 +1,58 @@
+/* Appearance*/
+a.router-link-active {
+  border-bottom: 1px solid $primary-color;
+}
+.links {
+  font-family: $primary-font;
+  background-color: $secondary-background;
+  border-bottom: 1px solid $color-gray;
+  font-size: 12px;
+  font-weight: 300;
+
+  > {
+    a {
+      color: $color-dark;
+      padding: 0.75em;
+      text-align: center;
+      text-decoration: none;
+      transition: all 0.5s;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+    .line {
+      background: $secondary-color;
+      height: 1px;
+      pointer-events: none;
+    }
+  }
+} /* The Magic*/
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 250px;
+  right: 0;
+}
+.links {
+  display: grid;
+  grid-template-columns: repeat(var(items), 1fr);
+  position: relative;
+
+  > {
+    .line {
+      opacity: 0;
+      transition: all 0.5s;
+      position: absolute;
+      bottom: 0;
+      left: var(left, calc(100% / var(items) * (var(index) - 1)));
+      width: var(width, calc(100% / var(items)));
+    }
+    a {
+      &:hover ~ .line {
+        opacity: 1;
+      }
+    }
+  }
+}
